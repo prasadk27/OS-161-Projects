@@ -1,0 +1,74 @@
+Script started on Sat 10 Dec 2016 04:32:12 AM EST
+[?1034hbash-4.1$ cd os161-1.11[K[K[K[K[K[K[K[K[K[Kroot
+bash-4.1$ ls
+bin	   hostinclude	kernel-ASST0  lib	sys161.conf
+DISK1.img  hostlib	kernel-ASST1  man	testbin
+DISK2.img  include	kernel-ASST2  sbin	typescript
+hostbin    kernel	kernel-ASST3  SWAPFILE
+bash-4.1$ sys161 kernel
+sys161: System/161 release 1.14, compiled Sep  4 2014 10:34:58
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+Philip and Prasad's system version 0 (ASST3 #41)
+
+Cpu is MIPS r2000/r3000
+316k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (100 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+ OS/161 kernel [? for menu]: ?
+
+OS/161 kernel menu
+    [?o] Operations menu                [kh] Kernel heap stats              
+    [?t] Tests menu                     [q] Quit and shut down              
+
+Operation took 0.021577080 seconds
+OS/161 kernel [? for menu]: ?t
+
+OS/161 tests menu
+    [at]  Array test                    [sy1] Semaphore test                
+    [bt]  Bitmap test                   [sy2] Lock test             (1)     
+    [qt]  Queue test                    [sy3] CV test               (1)     
+    [km1] Kernel malloc test            [fs1] Filesystem test               
+    [km2] kmalloc stress test           [fs2] FS read stress        (4)     
+    [tt1] Thread test 1                 [fs3] FS write stress       (4)     
+    [tt2] Thread test 2                 [fs4] FS write stress 2     (4)     
+    [tt3] Thread test 3                 [fs5] FS create stress      (4)     
+
+    (1) These tests will fail until you finish the synch assignment.
+    (4) These tests will fail until you finish the file system assignment.
+
+Operation took 0.096556600 seconds
+OS/161 kernel [? for menu]: km1
+Starting kmalloc test...
+kmalloc test done
+Operation took 0.316422400 seconds
+OS/161 kernel [? for menu]: q
+Shutting down.
+The system is halted.
+sys161: 680767031 cycles (17592381k, 0u, 663174650i)
+sys161: 4479 irqs 0 exns 0r/0w disk 11r/1805w console 0r/0w/2m emufs 0r/0w net
+sys161: Elapsed real time: 27.204521 seconds (25.024 mhz)
+sys161: Elapsed virtual time: 27.230681240 seconds (25 mhz)
+bash-4.1$ quit[K[K[Kuit
+bash: quit: command not found
+bash-4.1$ exit
+exit
+
+Script done on Sat 10 Dec 2016 04:33:25 AM EST

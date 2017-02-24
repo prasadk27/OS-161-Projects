@@ -1,0 +1,62 @@
+Script started on Sat 10 Dec 2016 04:33:59 AM EST
+[?1034hbash-4.1$ sys161 kernel
+sys161: Cannot open config file sys161.conf
+bash-4.1$ cd root
+bash-4.1$ sys161 kernel
+sys161: System/161 release 1.14, compiled Sep  4 2014 10:34:58
+
+OS/161 base system version 1.11
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+Philip and Prasad's system version 0 (ASST3 #41)
+
+Cpu is MIPS r2000/r3000
+316k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (100 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+ OS/161 kernel [? for menu]: ?t
+
+OS/161 tests menu
+    [at]  Array test                    [sy1] Semaphore test                
+    [bt]  Bitmap test                   [sy2] Lock test             (1)     
+    [qt]  Queue test                    [sy3] CV test               (1)     
+    [km1] Kernel malloc test            [fs1] Filesystem test               
+    [km2] kmalloc stress test           [fs2] FS read stress        (4)     
+    [tt1] Thread test 1                 [fs3] FS write stress       (4)     
+    [tt2] Thread test 2                 [fs4] FS write stress 2     (4)     
+    [tt3] Thread test 3                 [fs5] FS create stress      (4)     
+
+    (1) These tests will fail until you finish the synch assignment.
+    (4) These tests will fail until you finish the file system assignment.
+
+Operation took 0.096635480 seconds
+OS/161 kernel [? for menu]: km2
+Starting kmalloc stress test...
+kmalloc stress test done
+Operation took 2.532854280 seconds
+OS/161 kernel [? for menu]: q
+Shutting down.
+The system is halted.
+sys161: 464421387 cycles (70626216k, 0u, 393795171i)
+sys161: 3397 irqs 0 exns 0r/0w disk 9r/1579w console 0r/0w/2m emufs 0r/0w net
+sys161: Elapsed real time: 18.533899 seconds (25.0579 mhz)
+sys161: Elapsed virtual time: 18.576855480 seconds (25 mhz)
+bash-4.1$ exit
+exit
+
+Script done on Sat 10 Dec 2016 04:34:45 AM EST
